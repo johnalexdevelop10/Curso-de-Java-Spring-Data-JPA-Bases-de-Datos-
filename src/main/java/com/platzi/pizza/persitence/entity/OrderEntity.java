@@ -41,7 +41,9 @@ public class OrderEntity {
     @JsonIgnore
     private CustomerEntity customer;
 
+
     @OneToMany(mappedBy = "order")
+    @OrderBy("price ASC")
     private List<OrderItemEntity> items;
 
 
